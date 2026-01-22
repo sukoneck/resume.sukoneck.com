@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  border-radius: 5px;
+  color: #bec4cf;
+  cursor: pointer;
+  padding: 1px;
+  text-decoration: underline;
+}
+
+a:active,
+a:hover {
+  color: #282c34;
+  text-decoration: none;
+  background-color: #f9c859;
+}
+
+a.toplinks,
+a.toplinks-background {
+  border-radius: 5px;
+  color: #282c34;
+  padding: 2px;
+  text-decoration: none;
+}
+
+a.toplinks-background {
+  background-color: #7a82da;
+}
+
+a.toplinks:active,
+a.toplinks:hover,
+a.toplinks-background:active,
+a.toplinks-background:hover {
+  background-color: #f9c859;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #20232a;
+  color: #bec4cf;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  opacity: 0.9;
+}
+
+button.briefcase {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 1000%;
+  margin: 0 auto;
+  text-align: center;
+
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 90%, 100% { transform: rotate(0deg); }
+
+  92% { transform: rotate(-3deg); }
+  94% { transform: rotate(3deg); }
+  96% { transform: rotate(-2deg); }
+  98% { transform: rotate(2deg); }
+}
+
+button.briefcase:hover {
+  transform: scale(1.1);
+  animation: none;
+}
+
+button.briefcase:active {
+  transform: scale(0.9);
+}
+
+#footer,
+#header,
+#torso {
+  flex-shrink: 0;
+  margin: 0 auto;
+  max-width: 1265px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#footer {
+  margin-top: auto;
+  color: #636d83;
+  padding-bottom: 32px;
+  padding-top: 48px;
+  text-align: center;
+}
+
+#header {
+  margin-top: 32px;
+}
+
+#torso {
+  flex: 1;
+}
+
+fun {
+  display: inline;
+  transition: background-color 0.05s, color 0.05s;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+li {
+  display: list-item;
+  margin-top: 0.25em;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-bottom: 16px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 0;
+}
+
+p.job {
+  color: #ff936a;
+  font-size: large;
+  padding-top: 24px;
+}
+
+p.job-padless {
+  color: #ff936a;
+  font-size: large;
+}
+
+p.name {
+  color: #10b1fe;
+  font-size: 2.5em;
+  padding-top: 32px;
+  text-align: center;
+}
+
+p.section {
+  color: #ff6480;
+  font-size: 2em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+p.summary {
+  color: #bec4cf;
+  font-size: large;
+  margin: auto;
+  max-width: 912px;
+  padding-top: 60px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+p.toplinks {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.print {
+  display: none;
+}
+
+.print-menu {
+  display: none;
+}
+
+.print-name {
+  display: none;
+}
+
+ul {
+  padding-left: 2em;
+}

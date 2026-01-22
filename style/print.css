@@ -4,6 +4,10 @@
   }
 }
 
+#footer {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -23,10 +27,6 @@ body {
 
 body.pre {
   font-size: small;
-}
-
-footer {
-  display: none;
 }
 
 p.job {
