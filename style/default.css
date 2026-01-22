@@ -187,6 +187,10 @@ p.toplinks {
   display: none;
 }
 
+.shake {
+  font-size: x-large;
+}
+
 ul {
   padding-left: 2em;
 }
