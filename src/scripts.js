@@ -57,12 +57,22 @@ function changeColors(el) {
   var pair = colorPairs[Math.floor(Math.random() * colorPairs.length)];
   el.style.backgroundColor = pair[0];
   el.style.color = pair[1];
+
+  var links = el.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.color = pair[1];
+  });
 }
 
 function resetColors(el) {
   if (isStylePrint) return;
   el.style.backgroundColor = '';
   el.style.color = '';
+
+  var links = el.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.color = '';
+  });
 }
 
 document.addEventListener('mouseover', (e) => {
