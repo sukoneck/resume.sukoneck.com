@@ -3,24 +3,31 @@
  */
 var isStylePrint = false;
 
-function stylePrint() {
-  return new Promise((resolve, reject) => {
-    let link = document.getElementById('stylesheet');
-    link.href = '../style/print.css';
-    isStylePrint = true;
-    setTimeout(() => resolve(), 500);
-  });
+async function waitForStyle(ms = 0) {
+  if (ms) await new Promise(r => setTimeout(r, ms));
+  await new Promise(r => requestAnimationFrame(r));
+}
+
+async function stylePrint() {
+  const link = document.getElementById('stylesheet');
+  link.href = '../style/print.css';
+  isStylePrint = true;
+  await waitForStyle(500);
 }
 
 function triggerPrint() {
   window.print();
 }
 
-function styleAndPrint() {
-  stylePrint().then(triggerPrint).catch(err => console.log(err));
+async function styleAndPrint() {
+  await loadContents();
+  await stylePrint();
+  await waitForStyle();
+  triggerPrint();
 }
 
-function styleDefault() {
+async function styleDefault() {
+  await loadContents();
   document.getElementById('stylesheet').href = '../style/default.css';
   isStylePrint = false;
 }
@@ -30,7 +37,7 @@ function styleDefault() {
  */
 
 function loadContents() {
-  fetch('src/contents.html')
+  return fetch('src/contents.html')
     .then(r => r.text())
     .then(html => { document.querySelector('#torso').innerHTML = html; });
 }
