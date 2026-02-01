@@ -85,7 +85,6 @@ button.briefcase:active {
   transform: scale(0.9);
 }
 
-#footer,
 #header,
 #torso {
   flex-shrink: 0;
@@ -98,11 +97,13 @@ button.briefcase:active {
 }
 
 #footer {
-  margin-top: auto;
   color: #636d83;
-  padding-bottom: 32px;
+  flex-shrink: 0;
+  padding-bottom: 72px;
   padding-top: 48px;
   text-align: center;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 #header {
