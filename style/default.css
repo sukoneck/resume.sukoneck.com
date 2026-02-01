@@ -99,7 +99,7 @@ button.briefcase:active {
 #footer {
   color: #636d83;
   flex-shrink: 0;
-  padding-bottom: 72px;
+  padding-bottom: 32px;
   padding-top: 48px;
   text-align: center;
   width: 100%;
