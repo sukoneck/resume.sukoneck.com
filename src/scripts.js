@@ -93,3 +93,10 @@ document.addEventListener('mouseout', (e) => {
   if (!funEl) return;
   resetColors(funEl);
 });
+
+function excitedEmail() {
+  const footer = document.getElementById('footer');
+  footer.classList.remove('excited');
+  void footer.offsetWidth;
+  footer.classList.add('excited');
+}

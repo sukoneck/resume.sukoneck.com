@@ -99,7 +99,7 @@ button.briefcase:active {
 #footer {
   color: #636d83;
   flex-shrink: 0;
-  padding-bottom: 32px;
+  padding-bottom: 82px;
   padding-top: 48px;
   text-align: center;
   width: 100%;
@@ -194,4 +194,21 @@ p.toplinks {
 
 ul {
   padding-left: 2em;
+}
+
+@keyframes footer-excited {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(2) translateY(-48px);
+    color: #bec4cf;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+#footer.excited {
+  animation: footer-excited 2.5s ease-out;
 }
