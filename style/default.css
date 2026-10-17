@@ -64,7 +64,7 @@ button.briefcase {
   margin: 0 auto;
   text-align: center;
 
-  animation: wiggle 3s ease-in-out infinite;
+  animation: wiggle 2s ease-in-out infinite;
 }
 
 @keyframes wiggle {
